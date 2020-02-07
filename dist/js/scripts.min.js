@@ -67,6 +67,14 @@ $(document).ready(function () {
         $('html').removeClass('html-over');
     });
 
+    //о нас открытие на моб версии
+
+    $('.js-more').on('click', function(e){
+        e.preventDefault();
+        $(this).closest('.js-show').removeClass('active');
+        $(this).hide();
+    })
+
     //Ruslan
     //Список
     let buttonBox = document.querySelectorAll('.metal__arrow-box');
