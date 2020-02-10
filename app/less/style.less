@@ -223,6 +223,7 @@
 	background-color: rgba(35, 44, 89, 0.75);
 	display: none;
 	align-items: center;
+	z-index: 10;
 
 	&.active {
 		display: flex;
@@ -609,33 +610,28 @@
 .representation {
 	color: white;
 	text-align: center;
-	font-family: 'Merriweather', serif;
-	font-style: normal;
-	font-weight: normal;
+	font-family: @MW;
 	position: relative;
 	z-index: 1;
-
-	&-img-box {
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 60px 10px;
+	border-radius: 4px;
+	overflow: hidden;
+	&__overlay {
+		background-color: #232C59;
 		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		opacity: 0.9;
 		z-index: -1;
-		background-image: url("../img/represantation_bg.jpg");
-		background-size: cover;
-		background-repeat: no-repeat;
-		width: 100%;
-		height: 100%;
-
-		&__grad {
-			width: 100%;
-			height: inherit;
-			background-color: #262F4F;
-			opacity: 0.85;
-		}
 	}
-
-	&__title {
+	&__ttl {
 		font-size: 40px;
-		line-height: 50px;
-		padding: 75px 0 60px;
+		line-height: 1.6em;
+		margin-bottom: 60px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -650,28 +646,17 @@
 			transform: scale(-1, 1);
 		}
 	}
-
-	&__content {
+	&__list {
 		display: flex;
 		justify-content: space-around;
-		padding-bottom: 60px;
-
-		&-title {
-			font-family: 'Open Sans', sans-serif;
-			font-style: normal;
-			font-weight: 600;
-			font-size: 16px;
-			letter-spacing: -0.2px;
-		}
-
-		&-number {
-			font-family: 'Merriweather', serif;
-			font-style: normal;
-			font-weight: normal;
-			font-size: 64px;
-			line-height: 80px;
-			letter-spacing: -2px;
-		}
+	}
+	&__subttl {
+		font-weight: 600;
+		font-family: @OS;
+		font-size: 16px;
+	}
+	&__num {
+		font-size: 64px;
 	}
 }
 
