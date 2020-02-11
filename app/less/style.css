@@ -755,8 +755,6 @@ img {
   display: flex;
   overflow-x: auto;
   justify-content: flex-end;
-  -ms-overflow-style: none;
-  overflow: -moz-scrollbars-none;
 }
 .metal__row::-webkit-scrollbar {
   width: 0;
@@ -1690,21 +1688,16 @@ img {
     display: none;
   }
   .search__input-b {
-    width: 200%;
-    left: -98%;
+    width: 100%;
+    left: 0;
   }
 }
 @media screen and (max-width: 360px) {
-  .search__input-b {
-    width: 228%;
-    left: -124%;
-  }
   .menu__list {
     width: 300px;
   }
   .metal__col {
     width: 100%;
-    padding-left: 20px;
     margin: 0 !important;
   }
   .metal__row {
